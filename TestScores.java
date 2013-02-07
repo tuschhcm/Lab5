@@ -27,6 +27,7 @@ public class TestScores{
       for(int i = 0; i < s.length; i++) {
          if(s[i] < MIN_SCORE || s[i] > MAX_SCORE) {
             throw new IllegalArgumentException("Invalid Score: " + s[i]);
+         
          } else {
             scores[i] = s[i];
          }
@@ -36,22 +37,14 @@ public class TestScores{
    //getAverage returns the average of all scores
    public double getAverage(){
       double total = 0;
-      
-      for(double s : scores){
-         total += s;
-      }
-      
+      for(double s : scores)total += s;
       return total/scores.length;
    }
    
    //toString returns all values in scores
    public String toString(){
       StringBuilder string =  new StringBuilder();
-      
-      for(double s : scores){
-         string.append(s + " ");
-      }
-      
+      for(double s : scores)string.append(s + " ");
       return string.toString();
    }
 }
