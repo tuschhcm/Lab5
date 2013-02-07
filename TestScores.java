@@ -28,9 +28,7 @@ public class TestScores{
          if(s[i] < MIN_SCORE || s[i] > MAX_SCORE) {
             throw new IllegalArgumentException("Invalid Score: " + s[i]);
          
-         } else {
-            scores[i] = s[i];
-         }
+         } else scores[i] = s[i];
       }
    }
    
